@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: folio-ingress
+  namespace: jgreben
+spec:
+  rules:
+  - host: okapi-jgreben.dev.sul.stanford.edu
+    http:
+      paths:
+      - backend:
+          service:
+            name: okapi
+            port:
+              number: 9130
+        path: /
+        pathType: Prefix
+  - host: stripes-platform-core-jgreben.dev.sul.stanford.edu
+    http:
+      paths:
+      - backend:
+          service:
+            name: stripes-platform-core
+            port:
+              number: 80
+        path: /
+        pathType: Prefix

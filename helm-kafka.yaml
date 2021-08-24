@@ -1,0 +1,38 @@
+autoCreateTopicsEnable: true
+metrics:
+  serviceMonitor:
+    namespace: prometheus
+resources:
+  limits:
+    memory: "1.5Gi"
+    cpu: "1"
+  requests:
+    memory: "1.5Gi"
+    cpu: "1"
+#readinessProbe:
+#  enabled: false
+#livenessProbe:
+#  enabled: false
+#  env:
+#    ZK_HEAP_SIZE: "1G"
+#  persistence:
+#    enabled: false
+#  image:
+#    PullPolicy: "IfNotPresent"
+#  url: "localhost"
+#  port: 2181
+#listeners:
+#  - hostname: kafka-jgreben-0
+#    port: 9092
+#advertisedListeners:
+#  - hostname: kafka-jgreben-0
+#    port: 9092
+#zookeeper:
+#  enabled: true
+#  resources:
+#    limits:
+#      memory: "500M"
+#      cpu: "10m"
+#    requests:
+#      memory: "500M"
+#      cpu: "10m"
