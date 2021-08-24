@@ -15,6 +15,7 @@ COPY init.sh /usr/local/bin/folio
 COPY platform-complete.json /usr/local/bin/folio
 COPY platform-core.json /usr/local/bin/folio
 COPY stripes.json /usr/local/bin/folio
+COPY stripes-core.json /usr/local/bin/folio
 
 #Set environment variables for script
 ENV OKAPI_URL='http://okapi-jgreben.dev.sul.stanford.edu'

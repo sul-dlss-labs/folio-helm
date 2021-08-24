@@ -12,6 +12,12 @@ elif [ "$MODULE_NAME" == "platform-complete" ]; then
     export MODULE_NAME=${id}
     ./create-deploy.sh
   done
+elif [ "$MODULE_NAME" == "platform-core" ]; then
+  # Register UI modules from provided stripes.json list
+  cat ./stripes-core.json | while read id ; do
+    export MODULE_NAME=${id}
+    ./create-deploy.sh
+  done
 else
   ./create-deploy.sh
 fi
