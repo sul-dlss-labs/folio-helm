@@ -57,20 +57,26 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources:
+#resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  limits:
-    cpu: 500m
-    memory: 1500Mi
-  requests:
-    cpu: 300m
-    memory: 500Mi
-
+#  limits:
+#    cpu: 500m
+#    memory: 1500Mi
+#  requests:
+#    cpu: 300m
+#    memory: 500Mi
+resources:
+    requests:
+      memory: "1.5Gi"
+      cpu: ".25"
+    limits:
+      memory: "1.5Gi"
+      cpu: "1"
 autoscaling:
-  enabled: false
+  enabled: true
   minReplicas: 1
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80
@@ -83,12 +89,12 @@ tolerations: []
 affinity: {}
 
 # Folio specific
-args: dev
-javaOptions: -Djava.awt.headless=true -Dstorage=postgres -Dpostgres_host=$(OKAPI_HOST) -Dpostgres_port=5432 -Dpostgres_username=$(OKAPI_DB_USER) -Dpostgres_password=$(OKAPI_DB_PASSWORD) -Dpostgres_database=$(OKAPI_DB) -Dlog4j.configurationFile=/etc/log4j2.xml -Dhost=okapi -Dokapiurl=http://okapi:9130
+args: cluster
+javaOptions: -Xms1024m -Xmx1280m -Djava.awt.headless=true -Dstorage=postgres -Dpostgres_host=$(OKAPI_HOST) -Dpostgres_port=5432 -Dpostgres_username=$(OKAPI_DB_USER) -Dpostgres_password=$(OKAPI_DB_PASSWORD) -Dpostgres_database=$(OKAPI_DB) -Dport=9130 -Dlog4j.configurationFile=/etc/log4j2.xml -Dhost=okapi -Dokapiurl=$(OKAPI_URL) -Dloglevel=INFO
 
 postJob:
-  enabled: false
-  okapiUrl: http://okapi:9130
-  tenantId: diku
+  enabled: true`
+  okapiUrl: http://okapi-jgreben.dev.sul.stanford.edu
+  tenantId: sul
   sampleData: false
   referenceData: false

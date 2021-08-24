@@ -4,11 +4,11 @@
 
 ### Linux console run command
 
-`docker run --rm --name folio-okapi-deletion -e TENANT_ID=diku -e OKAPI_URL=http://okapi:9130 -e MODULE_NAME=mod-calendar folio-okapi-deletion`
+`docker run --rm --name folio-okapi-deletion -e TENANT_ID=sul -e OKAPI_URL=http://okapi:9130 -e MODULE_NAME=mod-calendar folio-okapi-deletion`
 
 ## Alternative runnig image without compiling
 
-`docker run --rm --name folio-okapi-deletion -e TENANT_ID=diku -e OKAPI_URL=http://okapi:9130 -e MODULE_NAME=mod-calendar docker.dev.folio.org/folio-okapi-deletion`
+`docker run --rm --name folio-okapi-deletion -e TENANT_ID=sul -e OKAPI_URL=http://okapi:9130 -e MODULE_NAME=mod-calendar docker.dev.folio.org/folio-okapi-deletion`
 
 ## Environment variables
 
@@ -25,7 +25,7 @@ Internal OKAPI URL to use. Defaults to `http://okapi:9130`.
 
 ### TENANT_ID
 
-The short name of the Tenant. Defaults to `diku`.
+The short name of the Tenant. Defaults to `sul`.
 
 ### PURGE_DATA
 

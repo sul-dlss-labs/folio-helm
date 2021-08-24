@@ -83,6 +83,6 @@ affinity: {}
 postJob:
   enabled: false
   okapiUrl: http://okapi:9130
-  tenantId: diku
+  tenantId: sul
   sampleData: false
   referenceData: false

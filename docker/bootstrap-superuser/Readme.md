@@ -4,11 +4,11 @@
 
 ### Linux console run command
 
-`docker run --rm --name bootstrap-superuser -e TENANT_ID=diku -e ADMIN_USER=diku_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 bootstrap-superuser`
+`docker run --rm --name bootstrap-superuser -e TENANT_ID=sul -e ADMIN_USER=sul_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 bootstrap-superuser`
 
 ## Alternative runnig image without compiling
 
-`docker run --rm --name bootstrap-superuser -e TENANT_ID=diku -e ADMIN_USER=diku_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 docker.dev.folio.org/bootstrap-superuser`
+`docker run --rm --name bootstrap-superuser -e TENANT_ID=sul -e ADMIN_USER=sul_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 docker.dev.folio.org/bootstrap-superuser`
 
 ## Environment variables
 
@@ -16,11 +16,11 @@ When you deploy the `bootstrap-superuser` image, you can adjust the configuratio
 
 ### TENANT_ID
 
-The short name of the Tenant. Defaults to `diku`.
+The short name of the Tenant. Defaults to `sul`.
 
 ### ADMIN_USER
 
-Name of the Folio superuser to create. Defaults to `diku_admin`.
+Name of the Folio superuser to create. Defaults to `sul_admin`.
 
 ### ADMIN_PASSWORD
 

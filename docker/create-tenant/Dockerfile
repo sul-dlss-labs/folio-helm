@@ -14,7 +14,7 @@ COPY create-deploy.sh /usr/local/bin/folio
 
 #Set environment variables for script
 ENV OKAPI_URL='http://okapi:9130'
-ENV TENANT_ID='diku'
+ENV TENANT_ID='sul'
 
 #Execute the script on container runtime
 CMD ["/usr/local/bin/folio/create-deploy.sh"]

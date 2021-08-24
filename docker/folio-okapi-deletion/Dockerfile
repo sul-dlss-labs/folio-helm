@@ -18,7 +18,7 @@ COPY stripes.json /usr/local/bin/folio
 #Set environment variables for script
 ENV OKAPI_URL='http://okapi:9130'
 ENV MODULE_NAME=''
-ENV TENANT_ID='diku'
+ENV TENANT_ID='sul'
 ENV PURGE_DATA='true'
 
 #Execute the script on container runtime

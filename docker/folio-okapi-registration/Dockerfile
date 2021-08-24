@@ -13,14 +13,15 @@ WORKDIR /usr/local/bin/folio
 COPY create-deploy.sh /usr/local/bin/folio
 COPY init.sh /usr/local/bin/folio
 COPY platform-complete.json /usr/local/bin/folio
+COPY platform-core.json /usr/local/bin/folio
 COPY stripes.json /usr/local/bin/folio
 
 #Set environment variables for script
-ENV OKAPI_URL='http://okapi:9130'
+ENV OKAPI_URL='http://okapi-jgreben.dev.sul.stanford.edu'
 ENV MODULE_NAME=''
 ENV MODULE_VERSION='latest'
 ENV MODULE_URL=
-ENV TENANT_ID='diku'
+ENV TENANT_ID='sul'
 ENV SAMPLE_DATA='false'
 ENV REF_DATA='false'
 

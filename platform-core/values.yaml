@@ -81,8 +81,8 @@ affinity: {}
 
 # Folio specific
 postJob:
-  enabled: false
-  okapiUrl: http://okapi:9130
-  tenantId: diku
+  enabled: true
+  okapiUrl: http://okapi-jgreben.dev.sul.stanford.edu
+  tenantId: sul
   sampleData: false
   referenceData: false

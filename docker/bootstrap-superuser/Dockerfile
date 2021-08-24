@@ -15,11 +15,11 @@ COPY bootstrap-superuser.pl /usr/local/bin/folio
 COPY create-superuser.sh /usr/local/bin/folio
 
 #Set environment variables for script
-ENV TENANT_ID='diku'
-ENV ADMIN_USER='diku_admin'
+ENV TENANT_ID='sul'
+ENV ADMIN_USER='sul_admin'
 ENV ADMIN_PASSWORD='admin'
-ENV OKAPI_URL='http://okapi:9130'
-ENV FLAGS='--onlyperms'
+ENV OKAPI_URL='http://okapi-jgreben.dev.sul.stanford.edu'
+#ENV FLAGS='--onlyperms'
 
 #Execute the script on container runtime
 CMD ["/usr/local/bin/folio/create-superuser.sh"]

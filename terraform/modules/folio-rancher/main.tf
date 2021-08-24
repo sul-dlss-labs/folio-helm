@@ -99,7 +99,7 @@ resource "rancher2_secret" "project-config" {
   project_id = rancher2_project.project.id
   data = {
     OKAPI_URL    = base64encode(join(".",[join("-", [var.rancher_project_name, "okapi"]), var.domain]))
-    TENANT_ID    = base64encode("diku")
+    TENANT_ID    = base64encode("sul")
     PROJECT_NAME = base64encode(rancher2_project.project.name)
     PROJECT_ID   = base64encode(element(split(":", rancher2_project.project.id), 1))
   }

@@ -18,10 +18,10 @@ use Data::Dumper;
 
 $| = 1;
 # Command line
-my $tenant = 'diku';
-my $user = 'diku_admin';
+my $tenant = 'sul';
+my $user = 'sul_admin';
 my $password = 'admin';
-my $okapi = 'http://okapi:9130';
+my $okapi = 'http://okapi-jgreben.dev.sul.stanford.edu';
 my $no_perms = '';
 my $only_perms = '';
 my $st_token = '';
@@ -59,6 +59,7 @@ unless ($only_perms) {
     push(@{$header},( 'X-Okapi-Token' => $st_token, 'X-Okapi-Tenant' => 'supertenant' ));
   }
   $req = HTTP::Request->new('POST',"$okapi/_/proxy/tenants/$tenant/install",$header,encode_json([ $authtoken ]));
+  print $req->as_string;
   $resp = $ua->request($req);
   die $resp->status_line . "\n" unless $resp->is_success;
   my $disabled = decode_json($resp->content);

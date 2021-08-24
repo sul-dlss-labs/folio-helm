@@ -16,15 +16,15 @@ COPY init.sh /usr/local/bin/folio
 COPY create_views.sql /usr/local/bin/folio
 
 #Set environment variables for script
-ENV OKAPI_URL='http://okapi:9130'
+ENV OKAPI_URL='http://okapi-jgreben.dev.sul.stanford.edu'
 ENV MODULE_NAME=''
-ENV TENANT_ID='diku'
+ENV TENANT_ID='sul'
 ENV SAMPLE_DATA='true'
 ENV REF_DATA='true'
-ENV DB_PASSWORD='password'
-ENV DB_HOST='postgresql-db'
-ENV DB_DATABASE='database-name'
-ENV DB_USERNAME='postgres-user'
+ENV DB_PASSWORD='EfAdCymKecZov'
+ENV DB_HOST='folio-jgreben-okapi-rds.clqwjadk8neo.us-west-2.rds.amazonaws.com'
+ENV DB_DATABASE='okapi'
+ENV DB_USERNAME='okapi'
 ENV SQL_WHERE=" module_requestor_name like 'mod%' "
 
 
