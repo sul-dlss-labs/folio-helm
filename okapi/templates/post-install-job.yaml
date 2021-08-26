@@ -26,7 +26,7 @@ spec:
       restartPolicy: Never
       containers:
       - name: post-install-job
-        image: docker.dev.folio.org/folio-okapi-registration:latest
+        image: folioci/folio-okapi-registration:latest
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
           - name: MODULE_NAME

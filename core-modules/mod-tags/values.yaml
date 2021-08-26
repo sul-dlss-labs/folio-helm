@@ -86,7 +86,7 @@ dbMaxPoolSize: 5
 
 postJob:
   enabled: true
-  okapiUrl: $(OKAPI_URL)
+  okapiUrl: http://okapi:9130
   tenantId: sul
   sampleData: false
   referenceData: false

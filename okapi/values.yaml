@@ -94,7 +94,7 @@ javaOptions: -Xms1024m -Xmx1280m -Djava.awt.headless=true -Dstorage=postgres -Dp
 
 postJob:
   enabled: true
-  okapiUrl: $(OKAPI_URL)
+  okapiUrl: http://okapi:9130
   tenantId: sul
   sampleData: false
   referenceData: false
