@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "mod-circulation.fullname" . }}
+  name: {{ include "mod-circulation-old.fullname" . }}
   labels:
-    {{- include "mod-circulation.labels" . | nindent 4 }}
+    {{- include "mod-circulation-old.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "mod-circulation.selectorLabels" . | nindent 4 }}
+    {{- include "mod-circulation-old.selectorLabels" . | nindent 4 }}

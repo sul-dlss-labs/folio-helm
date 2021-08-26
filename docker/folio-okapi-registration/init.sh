@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "$MODULE_NAME" ]; then
-  # Register all modules from provided platform-complete.json list
+  # Register all modules from provided platform-core.json list
   cat ./platform-core.json | while read id ; do
     export MODULE_NAME=${id}
     ./create-deploy.sh

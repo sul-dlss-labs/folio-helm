@@ -26,12 +26,12 @@ entries:
   - apiVersion: v1
     appVersion: 19.0.0
     created: "2021-08-18T12:55:38.109962-07:00"
-    description: A Helm chart Folio mod-circulation for Kubernetes
+    description: A Helm chart Folio mod-circulation-old for Kubernetes
     digest: 86167e9e75227e496fd9fc8fa8366e9112b309d28b03799ca86117fbdf84f777
-    name: mod-circulation
+    name: mod-circulation-old
     type: application
     urls:
-    - https://folio-org.github.io/folio-helm/charts/mod-circulation-0.1.33.tgz
+    - https://folio-org.github.io/folio-helm/charts/mod-circulation-old-0.1.33.tgz
     version: 0.1.33
   mod-circulation-storage:
   - apiVersion: v1
@@ -39,10 +39,10 @@ entries:
     created: "2021-08-18T12:55:38.110546-07:00"
     description: A Helm chart for Kubernetes
     digest: 9e229545dad4453f604a9c482111603e2af13a6e8ccd2ff4ad470c7a772d23c0
-    name: mod-circulation-storage
+    name: mod-circulation-old-storage
     type: application
     urls:
-    - https://folio-org.github.io/folio-helm/charts/mod-circulation-storage-0.1.32.tgz
+    - https://folio-org.github.io/folio-helm/charts/mod-circulation-old-storage-0.1.32.tgz
     version: 0.1.32
   mod-codex-inventory:
   - apiVersion: v1

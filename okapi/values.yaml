@@ -6,9 +6,9 @@ replicaCount: 1
 
 image:
   repository: folioci/okapi
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "4.8.0-SNAPSHOT.704"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -93,8 +93,8 @@ args: cluster
 javaOptions: -Xms1024m -Xmx1280m -Djava.awt.headless=true -Dstorage=postgres -Dpostgres_host=$(OKAPI_HOST) -Dpostgres_port=5432 -Dpostgres_username=$(OKAPI_DB_USER) -Dpostgres_password=$(OKAPI_DB_PASSWORD) -Dpostgres_database=$(OKAPI_DB) -Dport=9130 -Dlog4j.configurationFile=/etc/log4j2.xml -Dhost=okapi -Dokapiurl=$(OKAPI_URL) -Dloglevel=INFO
 
 postJob:
-  enabled: true`
-  okapiUrl: http://okapi-jgreben.dev.sul.stanford.edu
+  enabled: true
+  okapiUrl: $(OKAPI_URL)
   tenantId: sul
   sampleData: false
   referenceData: false

@@ -1,5 +1,5 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "mod-circulation.fullname" . -}}
+{{- $fullName := include "mod-circulation-old.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
 {{- if semverCompare ">=1.14-0" .Capabilities.KubeVersion.GitVersion -}}
 apiVersion: networking.k8s.io/v1beta1
@@ -10,7 +10,7 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    {{- include "mod-circulation.labels" . | nindent 4 }}
+    {{- include "mod-circulation-old.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}

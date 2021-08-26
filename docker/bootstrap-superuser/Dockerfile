@@ -19,7 +19,7 @@ ENV TENANT_ID='sul'
 ENV ADMIN_USER='sul_admin'
 ENV ADMIN_PASSWORD='admin'
 ENV OKAPI_URL='http://okapi-jgreben.dev.sul.stanford.edu'
-#ENV FLAGS='--onlyperms'
+ENV FLAGS='--onlyperms'
 
 #Execute the script on container runtime
 CMD ["/usr/local/bin/folio/create-superuser.sh"]

@@ -8,7 +8,7 @@ image:
   repository: folioci/mod-login-saml
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "2.1.0-SNAPSHOT.61"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -85,7 +85,7 @@ dbMaxPoolSize: 5
 
 postJob:
   enabled: true
-  okapiUrl: http://okapi-jgreben.dev.sul.stanford.edu
+  okapiUrl: $(OKAPI_URL)
   tenantId: sul
   sampleData: false
   referenceData: false

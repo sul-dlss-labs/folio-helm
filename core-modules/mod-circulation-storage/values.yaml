@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: folioci/mod-circulation-storage
+  repository: folioci/mod-circulation-old-storage
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "12.2.0-SNAPSHOT.277"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -85,7 +85,7 @@ dbMaxPoolSize: 5
 
 postJob:
   enabled: true
-  okapiUrl: http://okapi-jgreben.dev.sul.stanford.edu
+  okapiUrl: $(OKAPI_URL)
   tenantId: sul
   sampleData: false
   referenceData: false
