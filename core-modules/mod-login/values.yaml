@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: folioci/mod-login
+  repository: folioorg/mod-login
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "7.2.0-SNAPSHOT.90"
+  tag: "7.2.0"
 
 imagePullSecrets: []
 nameOverride: ""

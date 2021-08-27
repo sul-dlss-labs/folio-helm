@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: folioci/okapi
+  repository: folioorg/okapi
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "4.8.0-SNAPSHOT.704"
+  tag: "4.8.0"
 
 imagePullSecrets: []
 nameOverride: ""

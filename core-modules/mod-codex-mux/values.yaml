@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: folioci/mod-codex-mux
+  repository: folioorg/mod-codex-mux
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "2.10.1-SNAPSHOT.101"
+  tag: "2.10.0"
 
 imagePullSecrets: []
 nameOverride: ""
